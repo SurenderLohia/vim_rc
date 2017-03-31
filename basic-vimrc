@@ -1,0 +1,34 @@
+syntax on " Syntax on
+set encoding=utf-8 " Encoding
+
+set noswapfile " no swap file (backup file)
+
+set ic " ignore case
+
+" Tabs
+set expandtab    " expand tab
+set shiftwidth=2 " shift tab
+set softtabstop=2 " soft tab stop
+"
+"
+" " set line numbers
+set number  " set number 
+set relativenumber " set relative number
+
+" " color theme
+" let g:solarized_termcolors=256
+syntax enable
+" " set background=dark
+colorscheme desert " solarized
+
+" Auto command
+autocmd BufRead,BufNewFile *.md setlocal spell " set spell check for .md files
+autocmd FileType gitcommit setlocal spell     " set spell check for git commit files
+set complete+=kspell " set auto spell complete
+
+
+" Key maps
+inoremap jk <Esc>
+
+" Key maps with leader
+let mapleader = "\<Space>"  " Leader key
