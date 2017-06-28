@@ -1,0 +1,43 @@
+call plug#begin('~/.vim/plugged')
+"Plug 'tpope/vim-sensible'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
+"Plug 'mileszs/ack.vim'
+call plug#end()
+
+" switching it on again
+filetype plugin indent on
+syntax on
+
+set ic " ignore case
+
+" Tabs
+set expandtab    " expand tab
+set shiftwidth=2 " shift tab
+set softtabstop=2 " soft tab stop
+
+" set line numbers
+set number  " set number 
+set relativenumber " set relative number
+
+set shell=/bin/bash
+
+colorscheme wombat256mod
+
+" Auto command
+autocmd BufRead,BufNewFile *.md setlocal spell " set spell check for .md
+" files
+autocmd FileType gitcommit setlocal spell     " set spell check for git
+" commit files
+set complete+=kspell " set auto spell complete
+
+"  Key maps
+inoremap jk <Esc>
+
+" Key maps with leader
+let mapleader = "\<Space>"  " Leader key
+
+set wildmenu
